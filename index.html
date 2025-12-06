@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindu Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <button id="hamburger" class="hamburger" aria-label="Open-menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        <div class="logo-text">Vikram Samvat Calender&nbsp;
+        <select class="dropdown-box" id="yearSelect">
+            <option selected>2082</option>
+            <option>2083</option>
+            <!-- <option>2084</option>
+            <option>2085</option> -->
+          </select>
+          </div>
+          
+        </div>
+
+        <div class="nav-search">
+            <input type="text" placeholder="Search any event..." id="searchInput">
+            <button class="search-btn" id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <div class="toggle-container">
+                <span id="lang-left">English</span>
+              
+                <label class="switch">
+                  <input type="checkbox" id="langToggle">
+                  <span class="slider"></span>
+                </label>
+              
+                <span id="lang-right">Hindi</span>
+              </div>
+            <!-- <ul>
+                <li><a href="/Login page/index.html" rel="noopener noreferrer">Login</a></li>
+                <li><a href="/Signup page/index.html">Sign up</a></li>
+            </ul> -->
+        </div>
+    </nav>
+
+    <!-- Side panel + overlay (place after nav) -->
+<div class="overlay" id="overlay" hidden></div>
+
+<aside class="side-panel" id="sidePanel" aria-hidden="true">
+  <button class="panel-close" id="panelClose" aria-label="Close menu">✕</button>
+  <nav class="panel-nav">
+    <ul>
+      <a href="../About us/index.html"><li>About us</li></a>
+      <a href="../Help/index.html"><li>Help</li></a>
+      <!-- <a href="#"><li>Contact us</li></a> -->
+    </ul>
+  </nav>
+</aside>
+<div class="main-layout">
+    
+  <!-- LEFT SIDE: Calendar -->
+  <div class="left-side-calendar">
+    <iframe src="../Gregorian calender/index.html" scrolling="no"></iframe>
+
+    <!-- 🔹 NEW PRAHAR BOX -->
+    <div class="prahar-box">
+      <div class="prahar-title" id="prahar-title">Current Prahar</div>
+      <div class="prahar-name" id="prahar-name">--</div>
+      <div class="prahar-desc" id="prahar-desc">
+        <!-- filled by JS based on language -->
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE CONTENT -->
+  <div class="right-calendar-wrapper">
+    <iframe src="../Vikram Samvat/index.html" scrolling="no"></iframe>
+  </div>
+</div>
+
+
+  
+
+
+
+
+    <!-- <h1 id="title">Welcome to Home Page!</h1> -->
+    <script src="script.js"></script>
+
+</body>
+</html>
