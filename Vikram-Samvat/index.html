@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikram Samvat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div id="btn-left" class="arrow">&lt;</div>
+        
+            <!-- title in the center of navbar -->
+            <div class="month-title">Chaitra</div>
+        
+            <div id="btn-right" class="arrow">&gt;</div>
+        </nav>
+        
+        <div class="items">
+            <div class="days" id="days">
+                <div class="day-name">Ravi</div>
+                <div class="day-name">Som</div>
+                <div class="day-name">Mangal</div>
+                <div class="day-name">Budh</div>
+                <div class="day-name">Guru</div>
+                <div class="day-name">Shukra</div>
+                <div class="day-name">Shani</div>
+            </div>
+            <div class="dates" id="dates">
+                <!-- JS will generate the date cells here -->
+            </div>
+
+            <!-- Legend: bottom-right color codes -->
+            <div class="legend" aria-hidden="false" title="Event color legend">
+            <div class="legend-item">
+                <span class="dot festival" aria-hidden="true"></span>
+                 <span class="label">Festival</span>
+            </div>
+            <div class="legend-item">
+                <span class="dot task" aria-hidden="true"></span>
+                <span class="label">Your Task / Event</span>
+            </div>
+            <div class="legend-item">
+                <span class="dot holiday" aria-hidden="true"></span>
+                <span class="label">National Holiday</span>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    <div class="detail-box">
+        <nav class="selected-date">
+            <span id="selected-date-text"></span> 
+            <button id="add-event-btn" class="add-event-btn">+</button> 
+        </nav>
+        <div class="date-description" id="date-content">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
