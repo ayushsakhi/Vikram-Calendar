@@ -408,7 +408,7 @@ input:checked + .slider:before {
 
   /* Prahar box stays, centered and narrower */
   .prahar-box {
-    width: 80%;
+    width: 100%;
     max-width: 300px;
     margin-top: 1em;
     margin-left: 0 !important;
@@ -453,5 +453,6 @@ input:checked + .slider:before {
   } */
 
 }
+
 
 
