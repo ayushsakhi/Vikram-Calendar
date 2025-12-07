@@ -196,6 +196,9 @@ body {
     cursor: pointer;
     transition: 0.2s ease;
     margin-bottom: 2px;
+     /* IMPORTANT: same border always */
+    border: 2px solid transparent;
+    box-sizing: border-box;
 }
 .date-cell:hover{
     /* background: #2541b3;
@@ -204,7 +207,7 @@ body {
     color: #fff;
 }
 .date-cell.selected{
-    border: 2px solid orange;
+    border-color: orange;
 }
 .date-cell.today{
     background-color: orange;
