@@ -107,7 +107,6 @@ body{
     margin: 20px auto;
     color: #fff;
     box-sizing: border-box;
-    width: 90%;
 }
 
 .title-1, .title-2{
@@ -155,7 +154,7 @@ body{
     width: 100%;
     padding: 20px;
     max-width: 100%;
-    margin : 10px;
+    
   }
 
   .child-container{
