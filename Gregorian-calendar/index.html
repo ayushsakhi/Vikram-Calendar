@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Box Calendar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="calendar" role="application" aria-label="Calendar">
+    <div class="cal-header">
+      <div class="popover" id="monthPopover">
+        <select id="popoverMonth">
+          <option value="0">Jan</option>
+          <option value="1">Feb</option>
+          <option value="2">Mar</option>
+          <option value="3">Apr</option>
+          <option value="4">May</option>
+          <option value="5">Jun</option>
+          <option value="6">Jul</option>
+          <option value="7">Aug</option>
+          <option value="8">Sep</option>
+          <option value="9">Oct</option>
+          <option value="10">Nov</option>
+          <option value="11">Dec</option>
+        </select>
+      
+        <input type="number" id="popoverYear" min="1970" max="2100" />
+      
+        <button id="applyChange">Apply</button>
+      </div>
+      
+    <div class="nav">
+      <button class="btn" id="prev" title="Previous month" aria-label="Previous month">
+        <!-- left chevron -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="title" id="monthYear" aria-live="polite">Month Year</div>
+
+    <div class="nav">
+      <button class="btn" id="next" title="Next month" aria-label="Next month">
+        <!-- right chevron -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="weekdays" aria-hidden="true">
+    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+  </div>
+
+  <div class="grid" id="daysGrid" role="grid" aria-label="Days"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
