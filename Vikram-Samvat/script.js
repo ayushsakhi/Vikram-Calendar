@@ -482,7 +482,7 @@ const predefinedEvents2082 = {
                     <b>Christmas</b>
                 </div>
                 <div class="event-img">
-                    <img src="../Images/Christmas.jpeg" alt="img_err">
+                    <img src="../Christmas.jpeg" alt="img_err">
                 </div>
             </div>
             `,
