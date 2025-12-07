@@ -427,6 +427,7 @@ body {
   
     .detail-box {
       margin-left: 0;
+      margin-bottom: 2em;
     }
 
     /* Content inside the right card (description + tasks) */
@@ -436,7 +437,7 @@ body {
         padding: 10px 18px 12px 18px;
         color: black;            /* text color */
         font-size: 15px;
-        line-height: 1.6;
+        line-height: 1.6em;
     }
 
   
@@ -461,7 +462,8 @@ body {
   
     .date-cell {
       font-size: 16px;
-      padding-top: 4px;
+      padding-top: 6px;
+      padding-bottom: 2px;
     }
   
     /* Legend: stop it from pushing out of frame */
