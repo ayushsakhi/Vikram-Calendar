@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     -webkit-tap-highlight-color: rgba(0,0,0,0); /* fully transparent */
+    -webkit-user-select: none; /* optional: prevents text selection */
+    -webkit-touch-callout: none; /* optional: disables callout on long tap */
 }
 
 body{
@@ -453,6 +456,7 @@ input:checked + .slider:before {
   } */
 
 }
+
 
 
 
