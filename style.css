@@ -412,7 +412,7 @@ input:checked + .slider:before {
   /* Prahar box stays, centered and narrower */
   .prahar-box {
     width: 100%;
-    max-width: 320px;
+    max-width: 330px;
     margin-top: 1em;
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -428,15 +428,15 @@ input:checked + .slider:before {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   .right-calendar-wrapper iframe {
     width: 100%;
     max-width: 900px;
-    height: 60em;
+    height: 55em;
     margin-left: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   /* Hide the left side calendar on mobile */
@@ -458,6 +458,7 @@ input:checked + .slider:before {
   } */
 
 }
+
 
 
 
