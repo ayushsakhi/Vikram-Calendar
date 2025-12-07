@@ -456,10 +456,12 @@ body {
       margin-left: 0;
       margin-right: 0;
       gap: 6px;
+    
     }
   
     .date-cell {
-      font-size: 14px;
+      font-size: 16px;
+      padding-top: 4px;
     }
   
     /* Legend: stop it from pushing out of frame */
