@@ -7,6 +7,7 @@
     -webkit-touch-callout: none; /* optional: disables callout on long tap */
 }
 
+
 body {
     display: flex;
     justify-content: center;
@@ -479,5 +480,17 @@ body {
       max-width: 70px;
       padding: 10px;
     }
+
+    *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+
+    .calendar-cell, .date, button, a {
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+}
   }
   
