@@ -428,7 +428,7 @@ body {
     .detail-box {
       margin-left: 0;
       margin-bottom: 2em;
-      font-size: 16px;
+      font-size: 26px;
     }
 
     /* Content inside the right card (description + tasks) */
@@ -437,7 +437,7 @@ body {
         overflow-y: auto;        /* scroll when content is too long */
         padding: 10px 18px 12px 18px;
         color: black;            /* text color */
-        font-size: 26px;
+        font-size: 16px;
         line-height: 1.6em;
     }
 
