@@ -1,0 +1,213 @@
+:root{
+    --box-w: 400px;
+    --accent: #3366ff;
+    --bg: #ffffff;
+    --muted: #9aa4c0;
+    --cell-h: 40px;
+    --gap: 8px;
+  }
+
+  body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    background: transparent;   /* so it blends with Home background */
+    color: #0e153a;
+  }
+  
+  /* keep the calendar card centered inside its own page,
+     but not using body flex */
+  .calendar {
+    width: var(--box-w);
+    margin: 20px auto;
+    background: var(--bg);
+    border-radius:14px;
+    box-shadow: 0 8px 30px rgba(20,30,80,0.08);
+    padding:16px;
+    box-sizing:border-box;
+    position: relative;        /* important for legend positioning */
+    /* padding-bottom: 0px; */
+  }
+  
+
+  .cal-header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-bottom:10px;
+  }
+
+  .nav {
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+
+  .btn {
+    border: none;
+    background: transparent;
+    width:36px;
+    height:36px;
+    border-radius:8px;
+    display:grid;
+    place-items:center;
+    cursor:pointer;
+    transition: background .15s, transform .08s;
+  }
+  .btn:hover{ background: rgba(51,102,255,0.06); transform: translateY(-1px);}
+  .btn:active{ transform: translateY(0); }
+
+  .title {
+    text-align:center;
+    flex:1;
+    font-weight:600;
+    font-size:16px;
+    /* cursor: pointer; */
+  }
+
+  .small {
+    font-size:15px;
+    color:var(--muted);
+  }
+
+  .weekdays {
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap:0;
+    margin-bottom:6px;
+    margin-left: 4px;
+    text-transform:uppercase;
+    font-size:11px;
+    color:var(--muted);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap:0;
+    row-gap: 4px;
+  }
+
+  .cell {
+    height: var(--cell-h);
+    min-height: var(--cell-h);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:500;
+    background: transparent;
+    cursor: pointer;
+  
+    /* Prevent layout shift when border is applied */
+    box-sizing: border-box;
+    border: 2px solid transparent; /* ← invisible border reserved space */
+  }
+
+  .cell.empty{ 
+    color: transparent;
+    cursor: default;
+    border-color: transparent;
+}
+
+  .cell:hover{
+    background: rgba(51,102,255,0.06);
+  }
+
+  .cell.today{
+    background: linear-gradient(90deg, rgba(51,102,255,0.12), rgba(51,102,255,0.06));
+    color: var(--accent);
+    box-shadow: inset 0 -2px 0 rgba(51,102,255,0.08);
+    border-color: transparent;
+  }
+
+  .cell.other-month{
+    color:#b8bfd0;
+    font-weight:400;
+  }
+
+  @media (max-width:360px){
+    :root{ --box-w: 320px; --cell-h:36px; }
+  }
+
+  .cell.selected {
+    border-color: var(--accent);   /* visible border, same 2px width */
+    background: rgba(51,102,255,0.10);
+  }
+
+  .popover {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+    display: none;
+  }
+  .popover.show {
+    display: block;
+  }
+
+  /* Legend: small color-coded dots in bottom-right of calendar */
+.legend {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: transparent;    /* change to rgba(...) if you want a subtle background */
+    z-index: 40;                 /* keep above calendar content */
+    pointer-events: auto;
+    user-select: none;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  /* single legend item */
+  .legend-item {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  /* dot (circle) */
+  .legend .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  
+  /* colors — adjust to your theme if needed */
+  .legend .dot.festival { background: #2ecc71; }      /* green */
+  .legend .dot.task { background: #e74c3c; }          /* red */
+  .legend .dot.holiday { background: #f1c40f; }       /* yellow */
+  
+  /* label text */
+  .legend .label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1;
+    display: inline-block;
+  }
+  
+  /* responsive tweak: stack items on very small screens */
+  @media (max-width: 360px) {
+    .legend {
+      right: 10px;
+      bottom: 8px;
+      gap: 8px;
+      font-size: 11px;
+    }
+  }
+  
+  
+  
