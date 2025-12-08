@@ -162,8 +162,8 @@ body{
 
   /* Navbar wraps nicely */
   .navbar{
-    flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 8px;
   }
 
   .title{
@@ -173,6 +173,7 @@ body{
     width: 100%;
     text-align: center;
     margin-top: 5px;
+    padding-top: 8px;
   }
 
   .toggle-container{
@@ -180,6 +181,7 @@ body{
     justify-content: center;
     width: 100%;
     margin-top: 5px;
+    font-size: 17px;
   }
 
   .back-btn{
