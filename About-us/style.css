@@ -131,6 +131,7 @@ body{
 
   body{
        background: linear-gradient(45deg, #ec4242, #3e48d4, #be5be6);
+      overflow: hidden;
   }
 
   .navbar{
@@ -159,11 +160,11 @@ body{
   .container{
     flex-direction: column;          /* Stack About sections */
     width: 100%;
-    padding: 20px;
+    padding-top: 5px;
     max-width: 100%;
     background: transparent;
     height: 100svh;
-      margin: 0px;
+    margin: 0px;
   }
 
   .child-container{
