@@ -131,7 +131,7 @@ body{
 
   body{
        background: linear-gradient(45deg, #ec4242, #3e48d4, #be5be6);
-      overflow: hidden;
+      
   }
 
   .navbar{
@@ -159,7 +159,7 @@ body{
 
   .container{
     width: 100%;
-    padding-top: 0px;
+    padding-top: 10px;
     max-width: 100%;
     background: transparent;
     height: 100svh;
