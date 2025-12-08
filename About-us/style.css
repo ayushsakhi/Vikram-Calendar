@@ -160,7 +160,8 @@ body{
   .container{
     flex-direction: column;          /* Stack About sections */
     width: 100%;
-    padding-top: 5px;
+    padding-top: 0px;
+    
     max-width: 100%;
     background: transparent;
     height: 100svh;
@@ -173,7 +174,7 @@ body{
 
   .title-1, .title-2{
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 15px;
   }
 
