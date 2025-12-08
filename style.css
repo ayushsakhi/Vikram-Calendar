@@ -434,7 +434,7 @@ input:checked + .slider:before {
   .right-calendar-wrapper iframe {
     width: 100%;
     max-width: 900px;
-    height: 90em;
+    height: 70em;
     margin-left: 0;
     margin-bottom: 1em;
   }
@@ -458,6 +458,7 @@ input:checked + .slider:before {
   } */
 
 }
+
 
 
 
