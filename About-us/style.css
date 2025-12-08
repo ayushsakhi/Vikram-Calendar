@@ -134,10 +134,8 @@ body{
   }
 
   .navbar{
-    flex-wrap: wrap;                 /* Wrap nav items */
     justify-content: space-between;
-    padding-top: 5px;
-       
+    padding-top: 5px;          
   }
 
   .title{
@@ -164,6 +162,8 @@ body{
     max-width: 100%;
     max-height: 100%;
     background: transparent;
+    margin: 0px auto;
+    margin-top: 5px;
   }
 
   .child-container{
