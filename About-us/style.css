@@ -158,10 +158,8 @@ body{
   }
 
   .container{
-    flex-direction: column;          /* Stack About sections */
     width: 100%;
     padding-top: 0px;
-    
     max-width: 100%;
     background: transparent;
     height: 100svh;
