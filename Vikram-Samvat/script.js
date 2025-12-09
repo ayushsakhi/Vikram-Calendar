@@ -148,7 +148,7 @@ const predefinedEvents2082 = {
         1:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - प्रतिपदा <br>
                     नक्षत्र	- रोहिणी <br>
                     सूर्योदय : 6:58 <br>
@@ -164,7 +164,7 @@ const predefinedEvents2082 = {
          2:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - द्वितीय <br>
                     नक्षत्र	- म्रृगशीर्षा <br>
                     सूर्योदय : 6:59 <br>
@@ -179,7 +179,7 @@ const predefinedEvents2082 = {
          3:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - तृतीया <br>
                     नक्षत्र	- पुनर्वसु <br>
                     सूर्योदय : 6:59 <br>
@@ -195,7 +195,7 @@ const predefinedEvents2082 = {
          4:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - चतुर्थी <br>
                     नक्षत्र	- पुष्य <br>
                     सूर्योदय : 7:00 <br>
@@ -210,7 +210,7 @@ const predefinedEvents2082 = {
          5:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - पंचमी <br>
                     नक्षत्र	- आश्लेषा <br>
                     सूर्योदय : 7:00 <br>
@@ -225,7 +225,7 @@ const predefinedEvents2082 = {
          6:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - षष्ठी <br>
                     नक्षत्र	- मघा <br>
                     सूर्योदय : 7:01 <br>
@@ -240,7 +240,7 @@ const predefinedEvents2082 = {
          7:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - सप्तमी <br>
                     नक्षत्र	- पूर्व फाल्गुनी <br>
                     सूर्योदय : 7:02 <br>
@@ -256,7 +256,7 @@ const predefinedEvents2082 = {
          8:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - अष्टमी <br>
                     नक्षत्र	- उत्तर फाल्गुनी <br>
                     सूर्योदय : 7:02 <br>
@@ -271,7 +271,7 @@ const predefinedEvents2082 = {
          9:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - नवमी <br>
                     नक्षत्र	- हस्त <br>
                     सूर्योदय : 7:03 <br>
@@ -286,7 +286,7 @@ const predefinedEvents2082 = {
          10:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - दशमी <br>
                     नक्षत्र	- हस्त (up to 8:18 am)
                     चित्रा <br>
@@ -302,7 +302,7 @@ const predefinedEvents2082 = {
          11:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - एकादशी <br>
                     नक्षत्र	- चित्रा (up to 11:08 am)
                     स्वाति <br>
@@ -319,7 +319,7 @@ const predefinedEvents2082 = {
          12:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - द्वादशी <br>
                     नक्षत्र	- स्वाति (up to 2:09 pm)
                     विशाखा <br>
@@ -336,7 +336,7 @@ const predefinedEvents2082 = {
          13:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                     कृष्ण पक्ष - त्रयोदशी <br>
                     नक्षत्र	- विशाखा (up to 5:11 pm)
                     अनुराधा <br>
@@ -353,7 +353,7 @@ const predefinedEvents2082 = {
          14:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 कृष्ण पक्ष - चतुर्दशी <br>
                 नक्षत्र	- अनुराधा (up to 8:06 pm)
                 ज्येष्ठा <br>
@@ -370,7 +370,7 @@ const predefinedEvents2082 = {
          15:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 कृष्ण पक्ष - अमावस्या <br>
                 नक्षत्र	- ज्येष्ठा (up to 10:51 pm)
                 मूल <br>
@@ -387,7 +387,7 @@ const predefinedEvents2082 = {
          16:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 कृष्ण पक्ष - अमावस्या (up to 7:13 am)
                 प्रतिपदा <br>
                 नक्षत्र	- मूल <br>
@@ -403,7 +403,7 @@ const predefinedEvents2082 = {
          17:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - प्रतिपदा (up to 9:11 am)
                 द्वितीया <br>
                 नक्षत्र	- पूर्वाषाढ़ा <br>
@@ -420,7 +420,7 @@ const predefinedEvents2082 = {
          18:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - द्वितीया (up to 10:52 am)
                 तृतीया <br>
                 नक्षत्र	- उत्तराषाढ़ा <br>
@@ -437,7 +437,7 @@ const predefinedEvents2082 = {
          19:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - तृतीया (up to 12:13 pm)
                 चतुर्थी <br>
                 नक्षत्र	- श्रवण
@@ -454,7 +454,7 @@ const predefinedEvents2082 = {
          20:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - चतुर्थी (up to 1:11 pm)
                 पंचमी <br>
                 नक्षत्र	- धनिष्ठा <br>
@@ -471,7 +471,7 @@ const predefinedEvents2082 = {
          21:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - पंचमी (up to 1:43 pm)
                 षष्ठी <br>
                 नक्षत्र	- धनिष्ठा (up to 8:18 am)
@@ -491,7 +491,7 @@ const predefinedEvents2082 = {
          22:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - षष्ठी (up to 1:44 pm)
                 सप्तमी <br>
                 नक्षत्र	- शतभिषा (up to 9:00 am)
@@ -509,7 +509,7 @@ const predefinedEvents2082 = {
          23:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - सप्तमी (up to 1:10 pm)
                 अष्टमी <br>
                 नक्षत्र	- पूर्वभाद्रपदा (up to 9:09 am)
@@ -527,7 +527,7 @@ const predefinedEvents2082 = {
          24:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - अष्टमी (up to 12:00 pm)
                 नवमी <br>
                 नक्षत्र	- उत्तरभाद्रपदा (up to 8:43 am)
@@ -545,7 +545,7 @@ const predefinedEvents2082 = {
          25:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - नवमी (up to 10:12 am)
                 दशमी <br>
                 नक्षत्र	- रेवती (up to 7:40 am)
@@ -563,7 +563,7 @@ const predefinedEvents2082 = {
          26:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - दशमी (up to 7:51 am)
                 एकादशी
                 द्वादशी <br>
@@ -583,7 +583,7 @@ const predefinedEvents2082 = {
          27:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - द्वादशी
                 त्रयोदशी <br>
                 नक्षत्र	- कृत्तिका
@@ -600,7 +600,7 @@ const predefinedEvents2082 = {
          28:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - त्रयोदशी (up to 10:22 pm)
                 चतुर्दशी <br>
                 नक्षत्र	- रोहिणी (up to 10:48 pm)
@@ -620,7 +620,7 @@ const predefinedEvents2082 = {
          29:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - चतुर्दशी (up to 6:53 pm)
                 पूर्णिमा <br>
                 नक्षत्र	- म्रृगशीर्षा (up to 8:04 pm)
@@ -637,7 +637,7 @@ const predefinedEvents2082 = {
          30:  { 
             html: `
             <div class="event-row">
-                <div class="event-text">
+                <div class="event-text" style="font-size: 16px;">
                 शुक्ल पक्ष - पूर्णिमा (up to 3:32 pm)
                 प्रतिपदा <br>
                 नक्षत्र	- आद्रा (up to 5:27 pm)
