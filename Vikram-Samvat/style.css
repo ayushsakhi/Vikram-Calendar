@@ -423,7 +423,7 @@ body {
       margin: 0 0 12px 0;
       display: flex;
       flex-direction: column;
-      background: #f5f3f3;
+      background: #fff;
     }
 
     .legend .dot.holiday { background: #ffd900; } 
