@@ -423,6 +423,31 @@ body {
       margin: 0 0 12px 0;
       display: flex;
       flex-direction: column;
+      background: #f5f3f3;
+    }
+
+    .legend .dot.holiday { background: #ffd900; } 
+
+    .holiday-dot  { background-color: #ffd900; }
+
+    .date-cell:hover{
+        /* background: #2541b3;
+        background-color: #df2525; */
+        background-color: rgb(131, 179, 250);
+        color: #000000;
+    }
+    .date-cell.selected{
+        border: 2px solid rgb(0, 41, 226);
+        background: transparent;
+    }
+    .date-cell.today{
+        background-color:  rgb(218, 224, 253);
+        color: #000000;
+        border: 2px solid  rgb(0, 41, 226);
+    }
+
+    .navbar{
+        background: linear-gradient(to right, #5005ff, #8149e9);
     }
   
     .detail-box {
