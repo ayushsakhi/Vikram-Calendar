@@ -1469,7 +1469,7 @@ const predefinedEvents2082 = {
                 <ul></ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1489,7 +1489,7 @@ const predefinedEvents2082 = {
                 </li></ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+              
                 </div>
             </div>
             `
@@ -1509,7 +1509,7 @@ const predefinedEvents2082 = {
                 </li></ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1531,7 +1531,7 @@ const predefinedEvents2082 = {
                 </li></ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1549,7 +1549,7 @@ const predefinedEvents2082 = {
                 <ul></ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+              
                 </div>
             </div>
             `
@@ -1569,7 +1569,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+                
                 </div>
             </div>
             `
@@ -1589,7 +1589,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1609,7 +1609,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+                
                 </div>
             </div>
             `
@@ -1631,7 +1631,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+                <img src="../">
                 </div>
             </div>
             `
@@ -1651,7 +1651,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+                <img src="../">
                 </div>
             </div>
             `
@@ -1671,7 +1671,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1691,7 +1691,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1711,7 +1711,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+                
                 </div>
             </div>
             `
@@ -1731,7 +1731,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+               
                 </div>
             </div>
             `
@@ -1751,7 +1751,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                //<img src="../" alt="img_err">
+                
                 </div>
             </div>
             `
@@ -1777,9 +1777,9 @@ const predefinedEvents2082 = {
                 <img src="../holika dahan.jpg" alt="img_err">
                 </div>
             </div>
-            `
-        },
-        type: "festival"
+            `,
+            type: "festival"
+        }
     }
 };
 
