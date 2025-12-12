@@ -37,8 +37,8 @@ function getMonthDisplayName(index) {
 // Vikram Samvat months and their number of days
 // 0 = Ravi, 1 = Som, 2 = Mangal, 3 = Budh, 4 = Guru, 5 = Shukra, 6 = Shani
 const vikramMonths2082 = [
-    { name: "Vaishakha",  days: 30, startDay: 0 }, // starts on Mangal
     { name: "Chaitra",    days: 29, startDay: 6 }, // starts on Ravi
+    { name: "Vaishakha",  days: 30, startDay: 0 }, // starts on Mangal
     { name: "Jyeshtha",   days: 30, startDay: 2 }, // starts on Guru
     { name: "Ashadha",    days: 29, startDay: 4 }, // starts on Shani
     { name: "Shravana",   days: 30, startDay: 5 }, // starts on Som
@@ -1631,7 +1631,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                <img src="../">
+               
                 </div>
             </div>
             `
@@ -1651,7 +1651,7 @@ const predefinedEvents2082 = {
                 </ul>
                 </div>
                 <div class="event-img">
-                <img src="../">
+               
                 </div>
             </div>
             `
