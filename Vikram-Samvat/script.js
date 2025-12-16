@@ -1196,7 +1196,7 @@ const predefinedEvents2082 = {
             html: `
             <div class="event-row">
                 <div class="event-text" style="font-size: 16px;">
-                    कृष्ण पक्ष -प्रतिपदा
+                    कृष्ण पक्ष - प्रतिपदा
                     द्वितीया <br>
                     नक्षत्र	- आश्लेषा (up to 10:47 pm)
                     मघा<br>
@@ -2332,7 +2332,565 @@ const predefinedEvents2083 = {
             </div>
             `
         }
+    },
+    1:{
+        1:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - प्रतिपदा (up to 8:42 am)
+                    द्वितीया <br>
+                    नक्षत्र	- चित्रा (up to 7:24 pm)
+                    स्वाति <br>
+                    सूर्योदय : 6:21 <br>
+                    सूर्यास्त : 6:39 <br>
+                   
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        2:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - द्वितीया (up to 10:09 am)
+                    तृतीया <br>
+                    नक्षत्र	- स्वाति (up to 9:35 pm)
+                    विशाखा <br>
+                    सूर्योदय : 6:20 <br>
+                    सूर्यास्त : 6:39 <br>
+                   
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        3:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - तृतीया (up to 12:00 pm)
+                    चतुर्थी <br>
+                    नक्षत्र	- विशाखा
+                    अनुराधा <br>
+                    सूर्योदय : 6:19 <br>
+                    सूर्यास्त : 6:39 <br>
+                <ul><li>संकष्टी चतुर्थी</li></ul>
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        4:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - चतुर्थी (up to 2:11 pm)
+                    पंचमी <br>
+                    नक्षत्र	- अनुराधा
+                    ज्येष्ठा <br>
+                    सूर्योदय : 6:18 <br>
+                    सूर्यास्त : 6:40 <br>
+                   
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        5:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - पंचमी (up to 4:35 pm)
+                    षष्ठी <br>
+                    नक्षत्र	- ज्येष्ठा
+                    मूल <br>
+                    सूर्योदय : 6:17 <br>
+                    सूर्यास्त : 6:40 <br>
+                   
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        6:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - षष्ठी (up to 7:02 pm)
+                    सप्तमी <br>
+                    नक्षत्र	- मूल <br>
+                    सूर्योदय : 6:16 <br>
+                    सूर्यास्त : 6:41 <br>
+                   
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        7:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - सप्तमी (up to 9:20 pm)
+                    अष्टमी <br>
+                    नक्षत्र	- मूल (up to 8:48 am)
+                    पूर्वाषाढ़ा <br>
+                    सूर्योदय : 6:15 <br>
+                    सूर्यास्त : 6:41 <br>
+                   
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        8:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - अष्टमी (up to 11:16 pm)
+                    नवमी <br>
+                    नक्षत्र	- पूर्वाषाढ़ा (up to 11:27 am)
+                    उत्तराषाढ़ा <br>
+                    सूर्योदय : 6:14 <br>
+                    सूर्यास्त : 6:41 <br>
+                    <ul><li>कालाष्टमी</li></ul>                  
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        9:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - नवमी
+                    दशमी <br>
+                    नक्षत्र	- उत्तराषाढ़ा (up to 1:39 pm)
+                    श्रवण <br>
+                    सूर्योदय : 6:13 <br>
+                    सूर्यास्त : 6:42 <br>
+                    <ul><li>ज्योतिबा फुले जयंती</li></ul>                  
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        10:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - दशमी
+                    एकादशी <br>
+                    नक्षत्र	- श्रवण (up to 3:14 pm)
+                    धनिष्ठा <br>
+                    सूर्योदय : 6:12 <br>
+                    सूर्यास्त : 6:42 <br>
+                                 
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        11:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - एकादशी
+                    द्वादशी <br>
+                    नक्षत्र	- धनिष्ठा (up to 4:03 pm)
+                    शतभिषा <br>
+                    सूर्योदय : 6:11 <br>
+                    सूर्यास्त : 6:42 <br>
+                    <ul><li>वरूथिनी एकादशी</li>
+                    <li>वल्लभाचार्य जयंती</li></ul>
+                                 
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        12:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - द्वादशी
+                    त्रयोदशी <br>
+                    नक्षत्र	- शतभिषा (up to 4:05 pm)
+                    पूर्वभाद्रपदा <br>
+                    सूर्योदय : 6:11 <br>
+                    सूर्यास्त : 6:43 <br>
+                    <ul><li>सेन जयंती</li>
+                    <li>बैसाखी</li>
+                    <li>मेष संक्रांति</li></ul>
+                                 
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        13:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - त्रयोदशी (up to 10:31 pm)
+                    चतुर्दशी <br>
+                    नक्षत्र	- पूर्वभाद्रपदा (up to 3:22 pm)
+                    उत्तरभाद्रपदा <br>
+                    सूर्योदय : 6:10 <br>
+                    सूर्यास्त : 6:43 <br>
+                    <ul><li>प्रदोष व्रत</li>
+                    <li>मासिक शिवरात्रि</li></ul>
+                                 
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        14:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - चतुर्दशी (up to 8:11 pm)
+                    अमावस्या <br>
+                    नक्षत्र	- उत्तरभाद्रपदा (up to 1:58 pm)
+                    रेवती <br>
+                    सूर्योदय : 6:09 <br>
+                    सूर्यास्त : 6:44 <br>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        15:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    कृष्ण पक्ष - अमावस्या (up to 5:21 pm)
+                    प्रतिपदा <br>
+                    नक्षत्र	- रेवती (up to 12:02 pm)
+                    अश्विनी <br>
+                    सूर्योदय : 6:08 <br>
+                    सूर्यास्त : 6:44 <br>
+                    <ul><li>अमावस्या</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        16:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - प्रतिपदा (up to 2:11 pm)
+                    द्वितीया <br>
+                    नक्षत्र	- अश्विनी (up to 9:42 am)
+                    भरणी <br>
+                    सूर्योदय : 6:07 <br>
+                    सूर्यास्त : 6:44 <br>
+                    <ul><li>चंद्र दर्शन</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        17:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - द्वितीया (up to 10:49 am)
+                    तृतीया <br>
+                    नक्षत्र	- भरणी (up to 7:10 am)
+                    कृत्तिका
+                    रोहिणी <br>
+                    सूर्योदय : 6:06 <br>
+                    सूर्यास्त : 6:45 <br>
+                    <ul><li>परशुराम जयंती</li>
+                    <li>अक्षय तृतीया</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        18:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - तृतीया (up to 7:28 am)
+                    चतुर्थी
+                    पंचमी <br>
+                    नक्षत्र	- रोहिणी
+                    म्रृगशीर्षा <br>
+                    सूर्योदय : 6:05 <br>
+                    सूर्यास्त : 6:45 <br>
+                    <ul><li>सोमवार व्रत</li>
+                    <li>रोहिणी व्रत</li>
+                    <li>चतुर्थी व्रत</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        19:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - पंचमी
+                    षष्ठी <br>
+                    नक्षत्र	- म्रृगशीर्षा (up to 11:58 pm)
+                    आद्रा <br>
+                    सूर्योदय : 6:05 <br>
+                    सूर्यास्त : 6:46 <br>
+                    <ul><li>सूरदास जयंती</li>
+                    </ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        20:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - षष्ठी (up to 10:50 pm)
+                    सप्तमी <br>
+                    नक्षत्र	- आद्रा (up to 10:13 pm)
+                    पुनर्वसु <br>
+                    सूर्योदय : 6:04 <br>
+                    सूर्यास्त : 6:46 <br>
+                    <ul><li>षष्ठी</li>
+                    </ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        21:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - सप्तमी (up to 8:49 pm)
+                    अष्टमी <br>
+                    नक्षत्र	- पुनर्वसु (up to 8:57 pm)
+                    पुष्य <br>
+                    सूर्योदय : 6:03 <br>
+                    सूर्यास्त : 6:46 <br>
+                    <ul><li>गंगा सप्तमी</li>
+                    </ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        22:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - अष्टमी (up to 7:22 pm)
+                    नवमी <br>
+                    नक्षत्र	- पुष्य (up to 8:14 pm)
+                    आश्लेषा <br>
+                    सूर्योदय : 6:02 <br>
+                    सूर्यास्त : 6:47 <br>
+                    <ul><li>दुर्गा अष्टमी व्रत</li>
+                    <li>बगलामुखी जयंती</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        23:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - नवमी (up to 6:28 pm)
+                    दशमी <br>
+                    नक्षत्र	- आश्लेषा (up to 8:04 pm)
+                    मघा <br>
+                    सूर्योदय : 6:02 <br>
+                    सूर्यास्त : 6:47 <br>
+                    <ul><li>सीता नवमी</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        24:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - दशमी (up to 6:07 pm)
+                    एकादशी <br>
+                    नक्षत्र	- मघा (up to 8:27 pm)
+                    पूर्व फाल्गुनी <br>
+                    सूर्योदय : 6:01 <br>
+                    सूर्यास्त : 6:48 <br>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        25:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - एकादशी (up to 6:16 pm)
+                    द्वादशी <br>
+                    नक्षत्र	- पूर्व फाल्गुनी (up to 9:18 pm)
+                    उत्तर फाल्गुनी <br>
+                    सूर्योदय : 6:00 <br>
+                    सूर्यास्त : 6:48 <br>
+                    <ul><li>मोहिनी एकादशी</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        26:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - द्वादशी (up to 6:52 pm)
+                    त्रयोदशी <br>
+                    नक्षत्र	- उत्तर फाल्गुनी (up to 10:36 pm)
+                    हस्त <br>
+                    सूर्योदय : 5:59 <br>
+                    सूर्यास्त : 6:49 <br>
+                    <ul><li>भौम प्रदोष व्रत</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        27:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - त्रयोदशी (up to 7:52 pm)
+                    चतुर्दशी <br>
+                    नक्षत्र	- हस्त
+                    चित्रा <br>
+                    सूर्योदय : 5:59 <br>
+                    सूर्यास्त : 6:49 <br>
+                    <ul><li>प्रदोष व्रत</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        28:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - चतुर्दशी (up to 9:13 pm)
+                    पूर्णिमा <br>
+                    नक्षत्र	- चित्रा
+                    स्वाति <br>
+                    सूर्योदय : 5:58 <br>
+                    सूर्यास्त : 6:49 <br>
+                    <ul><li>नरसिंह जयंती</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    
+                </div>
+            </div>
+            `
+        },
+        29:{
+            html: `
+            <div class="event-row">
+                <div class="event-text" style="font-size: 16px;">
+                    शुक्ल पक्ष - पूर्णिमा (up to 10:53 pm)
+                    प्रतिपदा <br>
+                    नक्षत्र	- स्वाति
+                    विशाखा <br>
+                    सूर्योदय : 5:57 <br>
+                    सूर्यास्त : 6:50 <br>
+                    <ul><li>पूर्णिमा व्रत</li>
+                    <li>कूर्म जयंती</li>
+                    <li>चैत्र पूर्णिमा </li>
+                    <li>बुद्ध पूर्णिमा</li>
+                    <li>श्री सत्यनारायण पूजा</li></ul>
+                
+                </div>
+                <div class="event-img">
+                    <img src="../buddha.jpeg" alt="img_err">
+                </div>
+            </div>
+            `
+        }
     }
+
 };
 
 // Active object used by the rest of the code
