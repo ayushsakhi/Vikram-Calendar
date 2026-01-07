@@ -1,469 +1,530 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
      -webkit-tap-highlight-color: rgba(0,0,0,0); /* fully transparent */
     -webkit-user-select: none; /* optional: prevents text selection */
     -webkit-touch-callout: none; /* optional: disables callout on long tap */
 }
 
-body{
-    background-color: #f3f6fc;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(45deg, #f0ee91, #f7f2ca);
-}
 
-#title{
-    height: 70vh;
-    color: #185091;
+body {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-nav{
-    background-color: #5ea0ec;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 5px;
-    /* padding-bottom: 15px; */
-}
-
-.logo-text{
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    flex: 1;
-    margin-left: 18px;
-    /* text-shadow: 0 2px 6px rgba(0,0,0,6); */
-}
-
-.dropdown-box{
-    font-size: 17px;
-    background-color: #3176c5;
-    color: white;
-    font-weight: 600;
-    padding: 4px 10px;
-    font-size: 18px;
-    border-radius: 4px;
-    display: inline-block;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: none;
-}
-
-.hamburger{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    padding: 6px;
-    background: #3176c5;
-    border: transparent;
-    cursor: pointer;
-    margin-right: 8px;
-    margin-left: 10px;
-    border-radius: 6px;
-    font-size: 20px;
-    color: white;
-    /* box-shadow: 0 2px 6px rgba(0,0,0,6); */
-}
-.hamburger:focus {
-    outline: 2px solid rgba(0,0,0,0.12);
-}
-
-/* overlay when panel open */
-.overlay{
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 220ms ease;
-    pointer-events: none;
-  }
-  
-  /* side panel */
-  .side-panel{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 200px;                
-    max-width: 85vw;
-    background: #5ea0ec;
-    box-shadow: 2px 0 12px rgba(0,0,0,0.12);
-    transform: translateX(-110%); /* hidden by default */
-    transition: transform 260ms ease;
-    z-index: 1000;
+    align-items: flex-start;
+    gap: 2em;
+    min-height: 100vh;
     padding: 20px;
+    background-color: transparent;
+  }  
+
+
+.container {
+    height: 27em;
+    width: min(27em, 100% - 20px);   /* shrink on small screens */
+    background: linear-gradient(130deg, rgb(252, 184, 96), rgb(248, 231, 75));
+    box-shadow: 1px 2px 5px rgb(114, 114, 114);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 3em;
+} 
+
+.detail-box{
+    height: 30em;
+    width: min(25em, 100% - 20px);   /* shrink on small screens */
+    /* margin: 20px; */
+    background-color: #fdf9db;
+    border-radius: 18px;
+    color: #fff;
+    box-shadow: 1px 2px 5px rgb(114, 114, 114);
+    margin-bottom: 4em;
+    margin-left: 0;
+    padding-bottom: 10px;
+    /* box-sizing: content-box; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navbar {
+    background: linear-gradient(to right, #5005ff, #4982fd);
+    height: 3em;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
     box-sizing: border-box;
-  }
-  
-  /* close button inside panel */
-  .panel-close{
+    font-size: 17px;
+}
+
+.month-title {
+    color: #fff;
+    font-weight: 700;
+    /* cursor: pointer; */
+}
+
+
+ .navbar select{
+    color: white;
     border: none;
+    font-weight: bold;
+    font-size: 17px;
     background: transparent;
-    font-size: 22px;
+    appearance: none;
     cursor: pointer;
+    text-align: center;
+    text-align-last: center;
+} 
+
+/* The dark blue rounded box */
+/* .months-panel {
+    padding: 0;              remove extra space when closed
+    background: #2541b3;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    max-height: 0;           collapsed
+    opacity: 0;
+    height: auto;
+    overflow: visible;
+    transition: 0.3s ease;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
     position: absolute;
-    right: 12px;
-    top: 10px;
-  }
-  
-  /* nav list inside panel */
-  .side-panel .panel-nav ul{
-    list-style: none;
-    padding: 48px 0 0 0;
-    margin: 0;
-  }
-  .side-panel .panel-nav li{
-    margin-bottom: 14px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    width: 10em;
-    padding-left: 15px;
-    /* padding-right: 5em; */
-    /* background-color: #3176c5; */
-  }
-  .side-panel .panel-nav li:hover{
-    background-color: #185091;
-  }
-  .side-panel .panel-nav a{
-    text-decoration: none;
+    z-index: 9999;
+    margin-top: 10px;           no gap below navbar
+}
+
+.months-panel.open {
+    padding: 20px 40px;      only add padding when open
+    margin-top: 60px;        add spacing only when open
+    max-height: 400px;
+    opacity: 1;
+    z-index: 9999;
+} */
+
+
+/* .months-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 40px;
+    row-gap: 20px;
+    font-size: 17px;
+    justify-content: center;
+}
+.month-item {
     color: #fff;
     font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.month-item:hover {
+    background-color: #4982fd;
+    border-radius: 10px;
+}
+
+.month-item.active {
+    background: #4361ee;
+    border-radius: 8px;
+    transform: scale(1.03);
+} */
+
+#btn-left, #btn-right{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.items {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 40px 0 40px;
+    font-size: 17px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 2px;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#days{
+    margin-bottom: 20px;
+}
+
+.day-name {
+    /* optional style for weekday labels */
+    opacity: 0.9;
+}
+
+.dates {
+    flex: 1;  /* fills remaining height above footer */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);  /* 7 columns */
+    grid-template-rows: repeat(6, 1fr);     /* 6 equal rows */
+    gap: 8px;                               /* equal gaps */
+    padding: 4px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* row-gap: 2px; */
+}
+
+.date-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;              
+    /* reduced from default */
+    border-radius: 10px;
+    /* background: rgba(255, 255, 255, 0.35); */
+    font-weight: 500;
+    font-size: 17px;           /* optional: slightly smaller text */
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.15); */
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 2px;
+     /* IMPORTANT: same border always */
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+.date-cell:hover{
+    /* background: #2541b3;
+    background-color: #df2525; */
+    background-color: orange;
+    color: #fff;
+}
+.date-cell.selected{
+    border-color: orange;
+}
+.date-cell.today{
+    background-color: orange;
+    color: #fff;
+}
+
+.selected-date{
+    height: 2em;
+    font-size: 18px;
+    font-weight: 500;
+    background: linear-gradient(to right, #fd6e0f, #f3ae2e);
+    border-radius: 20px 20px 0 0;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Content inside the right card (description + tasks) */
+.date-description {
+    flex: 1 1 auto;          /* take remaining space under the header */
+    overflow-y: auto;        /* scroll when content is too long */
+    padding: 10px 18px 12px 18px;
+    color: black;            /* text color */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* + button style */
+.add-event-btn {
+    border: none;
+    outline: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    background-color: white;
+    color: #007bff;         /* or your blue */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.add-event-btn:hover {
+    transform: scale(1.05);
+}
+
+.empty-cell {
+    visibility: hidden;      /* keep space but hide content */
+    pointer-events: none;    /* not clickable */
+}
+
+.tasks-divider {
+    margin: 8px 12px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.user-events ul li {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.delete-task-btn:hover {
+    transform: scale(1.1);
+}
+.user-task-list li {
+    list-style-type: disc;
+    font-size: 14px;
+    color: black;
+    line-height: 1.3em;
+}
+
+/* Make sure date cells can stack number + dots nicely */
+.date-cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 2px; */
+}
+
+/* Row that holds the dots (at bottom of cell) */
+.indicator-row {
+    margin-top: 2px;          /* move closer/further from number */
+    display: flex;
+    gap: 2px;
+}
+
+/* Small coloured circles */
+.indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+/* Colours */
+.festival-dot { background-color: rgb(0, 179, 0); }
+.holiday-dot  { background-color: rgb(255, 255, 255); }
+.user-dot     { background-color: rgb(218, 0, 0); }
+
+.transparent-dot {
+    background-color: transparent;   /* invisible but takes space */
+}
+
+ /* Legend: small color-coded dots in bottom-right of calendar */
+ .legend {
+    /* position: absolute; */
+    left: 14px;
+    bottom: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    background: transparent;    /* change to rgba(...) if you want a subtle background */
+    z-index: 40;                 /* keep above calendar content */
+    pointer-events: auto;
+    user-select: none;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 15px;
+    padding-left: 30px;
+  }
+  
+  /* single legend item */
+  .legend-item {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  /* dot (circle) */
+  .legend .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  
+  /* colors — adjust to your theme if needed */
+  .legend .dot.festival { background: rgb(0, 179, 0); }      /* green */
+  .legend .dot.task { background:rgb(218, 0, 0); }          /* red */
+  .legend .dot.holiday { background: #ffffff; }       /* yellow */
+  
+  /* label text */
+  .legend .label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1;
     display: inline-block;
   }
   
-  /* --- Visible state classes --- */
-  .side-panel.open{
-    transform: translateX(0);
+  /* responsive tweak: stack items on very small screens */
+  @media (max-width: 360px) {
+    .legend {
+      right: 10px;
+      bottom: 8px;
+      gap: 8px;
+      font-size: 11px;
+    }
   }
-  
-  .overlay.visible{
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  /* small responsive tweak: reduce hamburger icon color on light nav */
-  nav { z-index: 900; } /* keep nav above page but below panel/overlay */
 
-.nav-left{
-    flex: 1;
+/* container for text + image */
+.predefined-event .event-row {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 10px;
 }
 
-.nav-search{
-    /* margin: 0 auto; */
-    display: flex;
-    align-items: center;
-    gap: 8px;
+/* left side: text */
+.predefined-event .event-text {
     flex: 1;
-    justify-content: center;
-    width: (300px, 60%);
-    max-width: 300px;
-    min-width: 200px;
-    background: white;
-    padding: 4px 10px;
-    border-radius: 20px;
-    border: none;
-    /* box-shadow: 0 2px 6px rgba(0,0,0,6); */
-}
-
-.nav-search input{
-    border: none;
-    outline: none;
-    padding: 4px 10px;
+    color: black;
     font-size: 15px;
-    /* width: 220px; */
+    padding: 10px 20px;
+    line-height: 30px;
 }
 
-.nav-search .search-btn{
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 18px;
-    color: #929292;
+/* right side: image */
+.predefined-event .event-img img {
+    max-width: 90px;      /* adjust size */
+    height: auto;
+    border-radius: 10px;   /* optional: rounded corners */
+    padding: 20px;
+
 }
 
-.nav-right{
-    margin-left: auto;
-    padding-right: 18px;
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+@media (max-width: 600px) {
+
+    /* Body becomes column layout */
+    body {
+      flex-direction: column;
+      align-items: center;
+      min-height: auto;
+    }
+  
+    .container {
+      width: 100%;
+      max-width: 100%;
+      height: auto;                /* let content define height */
+      margin: 0 0 12px 0;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+    }
+
+    .legend .dot.holiday { background: #ffd900; } 
+
+    .holiday-dot  { background-color: #ffd900; }
+
+    .date-cell:hover{
+        /* background: #2541b3;
+        background-color: #df2525; */
+        background-color: rgb(131, 179, 250);
+        color: #000000;
+    }
+    .date-cell.selected{
+        border: 2px solid rgb(0, 41, 226);
+        background: transparent;
+    }
+    .date-cell.today{
+        background-color:  rgb(218, 224, 253);
+        color: #000000;
+        border: 2px solid  rgb(0, 41, 226);
+    }
+
+    .navbar{
+        background: linear-gradient(to right, #5005ff, #8149e9);
+    }
+  
+    .detail-box {
+      margin-left: 0;
+      margin-bottom: 2em;
+      font-size: 26px;
+      height: 22em;
+    }
+
+    /* Content inside the right card (description + tasks) */
+    .date-description {
+        flex: 1 1 auto;          /* take remaining space under the header */
+        overflow-y: auto;        /* scroll when content is too long */
+        padding: 10px 18px 12px 18px;
+        color: black;            /* text color */
+        font-size: 16px;
+        line-height: 1.6em;
+    }
+
+  
+    /* Slightly reduce internal paddings so it fits better */
+    .items {
+      padding: 5px 16px 10px 16px;
+      font-size: 15px;
+    }
+  
+    .days {
+      margin-left: 0;
+      margin-right: 0;
+      font-size: 14px;
+    }
+  
+    .dates {
+      margin-left: 0;
+      margin-right: 0;
+      gap: 6px;
+    
+    }
+  
+    .date-cell {
+      font-size: 16px;
+      padding-top: 6px;
+      padding-bottom: 2px;
+    }
+  
+    /* Legend: stop it from pushing out of frame */
+    .legend {
+      padding: 10px;
+      padding-left: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .selected-date {
+      font-size: 16px;
+    }
+  
+    .predefined-event .event-text {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .predefined-event .event-img img {
+      max-width: 70px;
+      padding: 10px;
+    }
+
+    *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+
+    .calendar-cell, .date, button, a {
+    -webkit-tap-highlight-color: transparent;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.nav-right ul{
-    list-style: none;
-    display: flex;
-    gap: 17px;
-    align-items: center;
-    margin: 0;
-    padding: 0;
 }
-
-.nav-right ul li a{
-    text-decoration: none;
-    color: white;
-    padding: 4px 10px;
-    font-size: 18px;
-    border-radius: 4px;
-    display: inline-block;
-    background-color: #3176c5;
-    /* box-shadow: 0 2px 6px rgba(0,0,0,6); */
-}
-.nav-right ul li a:hover{
-    background-color: #185091;
-}
-
-.toggle-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 18px;
-  color: #fff;
-  margin-right: 40px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 25px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #3176c5;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #fff;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #3176c5
-}
-
-input:checked + .slider:before {
-  transform: translateX(24px);
-}
-
-.main-layout {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 1em;
-}
-
-/* Make right side calendar wrapper flex so iframe can center */
-/* RIGHT SIDE: Vikram calendar iframe */
-.right-calendar-wrapper {
-  margin-left: 3em;
-  height: auto;
- 
-}
-
-.right-calendar-wrapper iframe {
-  width: 900px;
-  height : 520px;
-  border: none;
-  border-radius: 20px;
-}
-
-
-/* LEFT SIDE: Gregorian calendar + Prahar box  */
-.left-side-calendar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 2em;
-}
-
-
-/* Gregorian calendar iframe */
-/* Gregorian calendar card */
-.left-side-calendar iframe {
-  width: 360px;
-  height: 360px;
-  border: none;
-  border-radius: 18px;
-}
-
-/* Prahar box under Gregorian calendar */
-.prahar-box {
-  margin-top: 1.5em;
-  width: 360px;
-  padding: 12px 16px;
-  border-radius: 18px;
-  background: linear-gradient(45deg, #8de63a);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-}
-
-.prahar-title {
-  font-size: 17px;
-  font-weight: 600;
-  color: #e62323;   /* orange title */
-  margin-bottom: 6px;
-}
-
-.prahar-name {
-  font-size: 17px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 4px;
-}
-
-.prahar-desc {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.4;
-}
-
-@media (max-width: 900px) {
-
-  /* --- NAVBAR --- */
-  nav {
-    flex-wrap: wrap;
   }
-
-  .nav-left {
-    flex: 1 1 100%;
-    margin-bottom: 6px;
-  }
-
-  .logo-text {
-    font-size: 18px;
-    margin-left: 8px;
-    /* padding-bottom: px; */
-  }
-
-  .nav-search {
-    flex: 1 1 100%;
-    max-width: none;
-    width: 100%;
-    margin: 4px 8px;
-    justify-content: space-between;
-  }
-
-  .nav-search input {
-    width: 100%;
-  }
-
-  .nav-right {
-    flex: 1 1 100%;
-    justify-content: center;
-    padding-right: 0;
-    margin-top: 4px;
-  }
-
-  .toggle-container {
-    margin-right: 0;
-    font-size: 16px;
-  }
-
-  /* --- MAIN LAYOUT --- */
-  /* Stack everything vertically on mobile */
-  .main-layout {
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 1em;
-  }
-
-  .left-side-calendar {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* center children: calendar + prahar */
-    margin-left: 0;
-
-  }
-
-  .left-side-calendar iframe {
-    margin-left: 0;
-  }
-
-  /* Prahar box stays, centered and narrower */
-  .prahar-box {
-    width: 100%;
-    max-width: 330px;
-    margin-top: 1em;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    text-align: left;
-    margin: 1em 0 0 0;
-    /* display: flex; */
-    /* justify-content: center; */
-  }
-
-  /* Vikram calendar full width */
-  .right-calendar-wrapper {
-    margin-left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1em;
-  }
-
-  .right-calendar-wrapper iframe {
-    width: 100%;
-    max-width: 900px;
-    height: 70em;
-    margin-left: 0;
-    margin-bottom: 1em;
-  }
-
-  /* Hide the left side calendar on mobile */
-  .left-side-calendar iframe {
-    display: none !important;
-  }
-
-  /* Optional: if you want even the prahar box hidden with it */
-  /* Uncomment below if needed */
-  /* .prahar-box { display: none !important; } */
-
-  .dropdown-box{
-    font-size: 16px;
-    margin-top: 8px;
-  }
-
-  /* .prahar-box{
-    display: none !important;
-  } */
-
-}
-
-
-
-
-
-
-
-
-
+  
