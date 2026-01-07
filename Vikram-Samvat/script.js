@@ -4860,7 +4860,7 @@ const predefinedEvents2083 = {
                 <li><b>Independence day</b></li></ul>
                 </div>
                 <div class="event-img">
-                    <img src="../independence day.jpg" alt="img_err">
+                    <img src="../independance day.jpg" alt="img_err">
                 </div>
             </div>
             `,
@@ -6482,7 +6482,7 @@ const predefinedEvents2083 = {
                     <li><b> गोवर्धन पूजा </b></li></ul>
                 </div>
                 <div class="event-img">
-                  <img src="govardhan.jpg" alt="img_err">
+                  <img src="../govardhan.jpg" alt="img_err">
                 </div>
             </div>
             `,
@@ -6502,7 +6502,7 @@ const predefinedEvents2083 = {
                     <li><b> भाई दूज </b></li></ul>
                 </div>
                 <div class="event-img">
-                  <img src="bhaidooj.jpeg" alt="img_err">
+                  <img src="../bhaidooj.jpeg" alt="img_err">
                 </div>
             </div>
             `,
