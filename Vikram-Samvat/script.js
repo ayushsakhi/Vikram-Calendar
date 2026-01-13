@@ -9216,11 +9216,6 @@ document.addEventListener("DOMContentLoaded", () => {
         
             datesContainer.appendChild(cell);
         }
-
-        cell.classList.add("date-cell");
-cell.dataset.monthIndex = currentMonthIndex;   // OR monthIndex
-cell.dataset.day = dayNumber;                  // date number
-
         
         setupDateSelection();
         highlightTodayCell();
