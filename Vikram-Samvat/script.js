@@ -9219,6 +9219,10 @@ document.addEventListener("DOMContentLoaded", () => {
         
         setupDateSelection();
         highlightTodayCell();
+
+            cell.classList.add("date-cell");
+            cell.dataset.monthIndex = currentMonthIndex;   // OR monthIndex
+            cell.dataset.day = dayNumber;  
     }
 
     // Arrow buttons
