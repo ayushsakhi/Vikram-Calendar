@@ -269,12 +269,12 @@ if (yearSelect) {
 window.addEventListener("message", (event) => {
   if (!event.data) return;
 
-  // ✅ Gregorian iframe sends clicked date
+  // Receiving from Gregorian calendar iframe
   if (event.data.type === "GREGORIAN_DATE_CLICK") {
-    const vikramIframe = document.querySelector(".right-calendar-wrapper iframe");
-    if (!vikramIframe) return;
+    const vikramIframe = document.getElementById("vikramFrame");
+    if (!vikramIframe || !vikramIframe.contentWindow) return;
 
-    // ✅ forward to Vikram iframe
+    // ✅ Forward message to Vikram iframe
     vikramIframe.contentWindow.postMessage(
       {
         type: "HIGHLIGHT_VIKRAM_DATE",
@@ -285,6 +285,7 @@ window.addEventListener("message", (event) => {
   }
 });
 
+
 console.log("vikramIframe:", vikramIframe);
 
 
@@ -292,5 +293,6 @@ console.log("vikramIframe:", vikramIframe);
 
 
    
+
 
 
