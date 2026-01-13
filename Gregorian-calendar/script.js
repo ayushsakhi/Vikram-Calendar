@@ -137,6 +137,16 @@ function activateDateClick() {
       // Set new selected
       cell.classList.add("selected");
       selectedCell = cell;
+
+     // ✅ Send clicked date to Home page (parent)
+const day = parseInt(cell.textContent);
+const clickedDate = new Date(shownYear, shownMonth, day);
+
+window.parent.postMessage({
+  type: "GREGORIAN_DATE_CLICK",
+  date: clickedDate.toISOString()
+}, "*");
+
     });
   });
 }
