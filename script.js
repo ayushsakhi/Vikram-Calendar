@@ -3,6 +3,8 @@
   const sidePanel = document.getElementById('sidePanel');
   const overlay = document.getElementById('overlay');
   const panelClose = document.getElementById('panelClose');
+  const vikramIframe = document.getElementById("vikramFrame");
+
 
   function openPanel(){
     sidePanel.classList.add('open');
@@ -287,3 +289,4 @@ window.addEventListener("message", (event) => {
 
 
    
+
