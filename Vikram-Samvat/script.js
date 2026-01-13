@@ -9503,6 +9503,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+window.addEventListener("message", (event) => {
+  if (!event.data) return;
+
+  if (event.data.type === "HIGHLIGHT_VIKRAM_DATE") {
+    const gregDate = new Date(event.data.date);
+    const vik = gregorianToVikram(gregDate);
+
+    goToVikramDate(vik.monthIndex, vik.day);
+  }
+});
+
+
 // ✅ Receive Gregorian date from parent and highlight corresponding Vikram date cell
 window.addEventListener("message", (event) => {
   if (!event.data) return;
