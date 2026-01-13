@@ -9503,6 +9503,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+function goToVikramDate(monthIndex, day) {
+  // 1) Move calendar to correct month
+  currentMonthIndex = monthIndex;
+  renderMonth(currentMonthIndex);
+
+  // 2) Remove old highlight
+  document.querySelectorAll(".date-cell.selected").forEach((c) => {
+    c.classList.remove("selected");
+  });
+
+  // 3) Find the target cell
+  const targetCell = document.querySelector(
+    `.date-cell[data-month-index="${monthIndex}"][data-day="${day}"]`
+  );
+
+  // 4) Highlight it
+  if (targetCell) {
+    targetCell.classList.add("selected");
+    targetCell.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+}
+
+
 
 // ✅ Receive Gregorian date from parent and highlight corresponding Vikram date cell
 window.addEventListener("message", (event) => {
