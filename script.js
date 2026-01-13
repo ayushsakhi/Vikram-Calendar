@@ -264,6 +264,26 @@ if (yearSelect) {
   });
 }
 
+window.addEventListener("message", (event) => {
+  if (!event.data) return;
+
+  // ✅ Gregorian iframe sends clicked date
+  if (event.data.type === "GREGORIAN_DATE_CLICK") {
+    const vikramIframe = document.querySelector(".right-calendar-wrapper iframe");
+    if (!vikramIframe) return;
+
+    // ✅ forward to Vikram iframe
+    vikramIframe.contentWindow.postMessage(
+      {
+        type: "HIGHLIGHT_VIKRAM_DATE",
+        date: event.data.date
+      },
+      "*"
+    );
+  }
+});
+
+
 
 
    
