@@ -525,6 +525,21 @@ body {
     box-shadow: none !important;
 }
 
+        /* ===== Swipe Animation ===== */
+
+.dates {
+    position: relative;
+    transition: transform 0.35s ease;
+}
+
+.slide-left {
+    transform: translateX(-100%);
+}
+
+.slide-right {
+    transform: translateX(100%);
+}
+
 }
   }
   
