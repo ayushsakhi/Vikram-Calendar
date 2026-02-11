@@ -530,14 +530,24 @@ body {
 /* ===== Advanced Swipe Animation ===== */
 
 /* Swipe viewport */
+/* Prevent screen overflow */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Swipe clipping container */
 .dates-viewport {
     overflow: hidden;
     width: 100%;
+    max-width: 100%;
     position: relative;
 }
 
 /* Sliding grid */
 .dates {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -545,6 +555,7 @@ body {
     transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     will-change: transform;
 }
+
 
 
 .slide-left {
