@@ -535,25 +535,29 @@ html, body {
     overflow-x: hidden;
 }
 
-/* Swipe clipping container */
+/* Swipe viewport */
 .dates-viewport {
     overflow: hidden;
     width: 100%;
-    max-width: 100%;
     position: relative;
 }
 
-/* Sliding grid */
+/* Sliding track */
+.dates-track {
+    display: flex;
+    width: 300%;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Each month page */
 .dates {
     width: 100%;
     min-width: 100%;
-    max-width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 8px;
-    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    will-change: transform;
 }
 
 
