@@ -9216,13 +9216,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
             datesContainer.appendChild(cell);
         }
-        
+              
         setupDateSelection();
         highlightTodayCell();
-
-            cell.classList.add("date-cell");
-            cell.dataset.monthIndex = currentMonthIndex;   // OR monthIndex
-            cell.dataset.day = dayNumber;  
     }
 
     // Arrow buttons
@@ -9505,43 +9501,4 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     
 
-});
-
-function goToVikramDate(monthIndex, day) {
-  // 1) Move calendar to correct month
-  currentMonthIndex = monthIndex;
-  renderMonth(currentMonthIndex);
-
-  // 2) Remove old highlight
-  document.querySelectorAll(".date-cell.selected").forEach((c) => {
-    c.classList.remove("selected");
-  });
-
-  // 3) Find the target cell
-  const targetCell = document.querySelector(
-    `.date-cell[data-month-index="${monthIndex}"][data-day="${day}"]`
-  );
-
-  // 4) Highlight it
-  if (targetCell) {
-    targetCell.classList.add("selected");
-    targetCell.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-}
-
-
-
-// ✅ Receive Gregorian date from parent and highlight corresponding Vikram date cell
-window.addEventListener("message", (event) => {
-  if (!event.data) return;
-
-  if (event.data.type === "HIGHLIGHT_VIKRAM_DATE") {
-    const gregDate = new Date(event.data.date);
-
-    // Convert Gregorian -> Vikram
-    const vik = gregorianToVikram(gregDate);
-
-    // Highlight that Vikram day cell
-    goToVikramDate(vik.monthIndex, vik.day);
-  }
 });
