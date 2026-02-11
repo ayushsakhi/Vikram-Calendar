@@ -544,6 +544,17 @@ body {
     transform: translateX(100%);
 }
 
+/* Prevent swipe animation from leaving calendar box */
+.container {
+    overflow: hidden;
+}
+
+.items {
+    overflow: hidden;
+}
+
+
+
 }
   }
   
