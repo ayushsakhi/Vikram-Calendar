@@ -9505,44 +9505,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ===== Swipe Support for Mobile ===== */
 
-const calendarContainer = document.querySelector(".container");
+/* ===== Premium Swipe System ===== */
 
-let touchStartX = 0;
-let touchEndX = 0;
+const calendar = document.querySelector(".container");
+const datesGrid = document.getElementById("dates");
 
-calendarContainer.addEventListener("touchstart", function (e) {
-    touchStartX = e.changedTouches[0].screenX;
-}, false);
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+let animationFrame;
 
-calendarContainer.addEventListener("touchend", function (e) {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-}, false);
+calendar.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    datesGrid.style.transition = "none";
+});
 
-function handleSwipe() {
-    const swipeDistance = touchEndX - touchStartX;
+calendar.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
 
-    if (Math.abs(swipeDistance) < 50) return; // ignore small swipes
+    currentX = e.touches[0].clientX;
+    let diff = currentX - startX;
 
-    const datesGrid = document.getElementById("dates");
+    // Elastic resistance effect
+    diff = diff * 0.6;
 
-    if (swipeDistance < 0) {
-        // Swipe Left → Next Month
-        datesGrid.classList.add("slide-left");
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+        datesGrid.style.transform = `translateX(${diff}px)`;
+    });
+});
+
+calendar.addEventListener("touchend", () => {
+    if (!isDragging) return;
+
+    isDragging = false;
+    let diff = currentX - startX;
+    datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
+
+    const threshold = 80;
+
+    if (diff < -threshold) {
+        // NEXT MONTH
+        datesGrid.style.transform = "translateX(-100%)";
 
         setTimeout(() => {
             document.getElementById("btn-right").click();
-            datesGrid.classList.remove("slide-left");
-        }, 300);
+            datesGrid.style.transition = "none";
+            datesGrid.style.transform = "translateX(100%)";
 
-    } else {
-        // Swipe Right → Previous Month
-        datesGrid.classList.add("slide-right");
+            requestAnimationFrame(() => {
+                datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
+                datesGrid.style.transform = "translateX(0)";
+            });
+
+        }, 200);
+
+    } else if (diff > threshold) {
+        // PREVIOUS MONTH
+        datesGrid.style.transform = "translateX(100%)";
 
         setTimeout(() => {
             document.getElementById("btn-left").click();
-            datesGrid.classList.remove("slide-right");
-        }, 300);
-    }
-}
+            datesGrid.style.transition = "none";
+            datesGrid.style.transform = "translateX(-100%)";
 
+            requestAnimationFrame(() => {
+                datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
+                datesGrid.style.transform = "translateX(0)";
+            });
+
+        }, 200);
+
+    } else {
+        // Snap back
+        datesGrid.style.transform = "translateX(0)";
+    }
+});
