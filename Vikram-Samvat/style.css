@@ -529,12 +529,23 @@ body {
 
 /* ===== Advanced Swipe Animation ===== */
 
-.dates {
+/* Swipe viewport */
+.dates-viewport {
+    overflow: hidden;
+    width: 100%;
     position: relative;
+}
+
+/* Sliding grid */
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 8px;
     transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
     will-change: transform;
-    touch-action: pan-y; /* allow vertical scroll only */
 }
+
 
 .slide-left {
     transform: translateX(-100%);
@@ -543,16 +554,6 @@ body {
 .slide-right {
     transform: translateX(100%);
 }
-
-/* Prevent swipe animation from leaving calendar box */
-.container {
-    overflow: hidden;
-}
-
-.items {
-    overflow: hidden;
-}
-
 
 
 }
