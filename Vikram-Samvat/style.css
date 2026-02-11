@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-     -webkit-tap-highlight-color: rgba(0,0,0,0); /* fully transparent */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* fully transparent */
     -webkit-user-select: none; /* optional: prevents text selection */
     -webkit-touch-callout: none; /* optional: disables callout on long tap */
 }
@@ -407,6 +407,13 @@ body {
 
 }
 
+.vikram-selected{
+    outline: 3px solid #ff9800;
+    background: rgba(255, 152, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+
 @media (max-width: 600px) {
 
     /* Body becomes column layout */
@@ -470,7 +477,7 @@ body {
   
     /* Slightly reduce internal paddings so it fits better */
     .items {
-      padding: 5px 15px 0 15px;
+      padding: 5px 16px 10px 16px;
       font-size: 15px;
     }
   
@@ -524,52 +531,6 @@ body {
     outline: none !important;
     box-shadow: none !important;
 }
-
-        /* ===== Swipe Animation ===== */
-
-/* ===== Advanced Swipe Animation ===== */
-
-/* Swipe viewport */
-/* Prevent screen overflow */
-html, body {
-    overflow-x: hidden;
-}
-
-/* Swipe viewport */
-.dates-viewport {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-/* Sliding track */
-.dates-track {
-    display: flex;
-    width: 300%;
-    transform: translateX(-100%);
-    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* Each month page */
-.dates {
-    width: 100%;
-    min-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 8px;
-}
-
-
-
-.slide-left {
-    transform: translateX(-100%);
-}
-
-.slide-right {
-    transform: translateX(100%);
-}
-
 
 }
   }
