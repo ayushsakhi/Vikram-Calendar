@@ -470,7 +470,7 @@ body {
   
     /* Slightly reduce internal paddings so it fits better */
     .items {
-      padding: 5px 16px 10px 16px;
+      padding: 5px 15px 0 15px;
       font-size: 15px;
     }
   
