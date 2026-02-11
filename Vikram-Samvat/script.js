@@ -9505,84 +9505,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ===== Swipe Support for Mobile ===== */
 
-/* ===== Premium Swipe System ===== */
-
-const calendar = document.querySelector(".container");
-const datesGrid = document.getElementById("dates");
+const track = document.getElementById("dates-track");
 
 let startX = 0;
 let currentX = 0;
 let isDragging = false;
-let animationFrame;
 
-calendar.addEventListener("touchstart", (e) => {
+track.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
     isDragging = true;
-    datesGrid.style.transition = "none";
+    track.style.transition = "none";
 });
 
-calendar.addEventListener("touchmove", (e) => {
+track.addEventListener("touchmove", (e) => {
     if (!isDragging) return;
-
     currentX = e.touches[0].clientX;
-    let diff = currentX - startX;
-
-    // Elastic resistance effect
-    diff = diff * 0.6;
-
-    cancelAnimationFrame(animationFrame);
-    animationFrame = requestAnimationFrame(() => {
-        datesGrid.style.transform = `translateX(${diff}px)`;
-    });
+    const diff = currentX - startX;
+    track.style.transform = `translateX(calc(-100% + ${diff}px))`;
 });
 
-calendar.addEventListener("touchend", () => {
-    if (!isDragging) return;
-
+track.addEventListener("touchend", () => {
     isDragging = false;
-    let diff = currentX - startX;
-    datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
+    track.style.transition = "transform 0.35s cubic-bezier(0.25,0.8,0.25,1)";
+    const diff = currentX - startX;
 
-    const threshold = 80;
-
-    if (diff < -threshold) {
-        // NEXT MONTH
-        datesGrid.style.transform = "translateX(-100vw)";
-
-
+    if (diff < -80) {
+        // Next
+        track.style.transform = "translateX(-200%)";
         setTimeout(() => {
             document.getElementById("btn-right").click();
-            datesGrid.style.transition = "none";
-            datesGrid.style.transform = "translateX(100vw)";
-
-
-            requestAnimationFrame(() => {
-                datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
-                datesGrid.style.transform = "translateX(0)";
-            });
-
-        }, 200);
-
-    } else if (diff > threshold) {
-        // PREVIOUS MONTH
-        datesGrid.style.transform = "translateX(100vw)";
-
-
+            track.style.transition = "none";
+            track.style.transform = "translateX(-100%)";
+        }, 300);
+    } else if (diff > 80) {
+        // Prev
+        track.style.transform = "translateX(0%)";
         setTimeout(() => {
             document.getElementById("btn-left").click();
-            datesGrid.style.transition = "none";
-            datesGrid.style.transform = "translateX(-100vw)";
-
-
-            requestAnimationFrame(() => {
-                datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
-                datesGrid.style.transform = "translateX(0)";
-            });
-
-        }, 200);
-
+            track.style.transition = "none";
+            track.style.transform = "translateX(-100%)";
+        }, 300);
     } else {
-        // Snap back
-        datesGrid.style.transform = "translateX(0)";
+        track.style.transform = "translateX(-100%)";
     }
 });
