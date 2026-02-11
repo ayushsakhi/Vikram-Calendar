@@ -527,9 +527,13 @@ body {
 
         /* ===== Swipe Animation ===== */
 
+/* ===== Advanced Swipe Animation ===== */
+
 .dates {
     position: relative;
-    transition: transform 0.35s ease;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+    touch-action: pan-y; /* allow vertical scroll only */
 }
 
 .slide-left {
