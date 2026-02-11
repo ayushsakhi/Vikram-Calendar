@@ -9547,12 +9547,14 @@ calendar.addEventListener("touchend", () => {
 
     if (diff < -threshold) {
         // NEXT MONTH
-        datesGrid.style.transform = "translateX(-100%)";
+        datesGrid.style.transform = "translateX(-100vw)";
+
 
         setTimeout(() => {
             document.getElementById("btn-right").click();
             datesGrid.style.transition = "none";
-            datesGrid.style.transform = "translateX(100%)";
+            datesGrid.style.transform = "translateX(100vw)";
+
 
             requestAnimationFrame(() => {
                 datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
@@ -9563,12 +9565,14 @@ calendar.addEventListener("touchend", () => {
 
     } else if (diff > threshold) {
         // PREVIOUS MONTH
-        datesGrid.style.transform = "translateX(100%)";
+        datesGrid.style.transform = "translateX(100vw)";
+
 
         setTimeout(() => {
             document.getElementById("btn-left").click();
             datesGrid.style.transition = "none";
-            datesGrid.style.transform = "translateX(-100%)";
+            datesGrid.style.transform = "translateX(-100vw)";
+
 
             requestAnimationFrame(() => {
                 datesGrid.style.transition = "transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1)";
