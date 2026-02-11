@@ -9502,3 +9502,47 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 });
+
+/* ===== Swipe Support for Mobile ===== */
+
+const calendarContainer = document.querySelector(".container");
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+calendarContainer.addEventListener("touchstart", function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, false);
+
+calendarContainer.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+
+    if (Math.abs(swipeDistance) < 50) return; // ignore small swipes
+
+    const datesGrid = document.getElementById("dates");
+
+    if (swipeDistance < 0) {
+        // Swipe Left → Next Month
+        datesGrid.classList.add("slide-left");
+
+        setTimeout(() => {
+            document.getElementById("btn-right").click();
+            datesGrid.classList.remove("slide-left");
+        }, 300);
+
+    } else {
+        // Swipe Right → Previous Month
+        datesGrid.classList.add("slide-right");
+
+        setTimeout(() => {
+            document.getElementById("btn-left").click();
+            datesGrid.classList.remove("slide-right");
+        }, 300);
+    }
+}
+
